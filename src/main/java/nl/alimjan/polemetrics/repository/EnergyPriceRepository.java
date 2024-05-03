@@ -1,6 +1,6 @@
 package nl.alimjan.polemetrics.repository;
 
-import nl.alimjan.polemetrics.client.model.EnergyPrice;
+import nl.alimjan.polemetrics.model.EnergyPrice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

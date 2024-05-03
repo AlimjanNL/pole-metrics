@@ -1,4 +1,4 @@
-package nl.alimjan.polemetrics.client.model;
+package nl.alimjan.polemetrics.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.Entity;

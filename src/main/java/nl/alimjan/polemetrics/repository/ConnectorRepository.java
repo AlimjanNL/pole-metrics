@@ -1,6 +1,6 @@
 package nl.alimjan.polemetrics.repository;
 
-import nl.alimjan.polemetrics.client.model.Connector;
+import nl.alimjan.polemetrics.model.Connector;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

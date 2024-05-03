@@ -1,0 +1,35 @@
+[
+  {
+    "id": "2023-07-01-0",
+    "country": "NL",
+    "buyVolume": "2,264.2",
+    "sellVolume": "4,775.9",
+    "price": "101.56",
+    "currency": "€",
+    "unit": "MWh",
+    "date": "2023-07-01",
+    "timeslot": "0"
+  },
+  {
+    "id": "2023-07-01-1",
+    "country": "NL",
+    "buyVolume": "2,521.3",
+    "sellVolume": "4,968.6",
+    "price": "99.50",
+    "currency": "€",
+    "unit": "MWh",
+    "date": "2023-07-01",
+    "timeslot": "1"
+  },
+  {
+    "id": "2023-07-01-2",
+    "country": "NL",
+    "buyVolume": "2,711.4",
+    "sellVolume": "4,462.1",
+    "price": "83.28",
+    "currency": "€",
+    "unit": "MWh",
+    "date": "2023-07-01",
+    "timeslot": "2"
+  }
+]

@@ -1,13 +1,13 @@
-package nl.alimjan.polemetrics.client.model;
+package nl.alimjan.polemetrics.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.time.Instant;
@@ -19,40 +19,35 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "locations")
+@Table(name = "evses")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Location {
+public class EVSE {
 
   @Id
-  private String id;
+  private String uid;
 
-  private String name;
-  private String type;
-  private String address;
-  private String city;
+  @Column(name = "evse_id")
+  @JsonProperty("evse_id")
+  private String evseId;
 
-  @Column(name = "postal_code")
-  @JsonProperty("postal_code")
-  private String postalCode;
-
-  private String country;
-
-  @Embedded
-  private Coordinates coordinates;
-
-  @Column(name = "charging_when_closed")
-  @JsonProperty("charging_when_closed")
-  private boolean chargingWhenClosed;
+  private String status;
 
   @Column(name = "last_updated")
   @JsonProperty("last_updated")
   private Instant lastUpdated;
 
-  @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "location")
-  private List<EVSE> evses;
-}
+  @Column(name = "physical_reference")
+  @JsonProperty("physical_reference")
+  private String physicalReference;
 
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "location_id")
+  private Location location;
+
+  @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "evse")
+  private List<Connector> connectors;
+}

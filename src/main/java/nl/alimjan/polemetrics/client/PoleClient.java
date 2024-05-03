@@ -1,9 +1,9 @@
 package nl.alimjan.polemetrics.client;
 
 import java.util.List;
-import nl.alimjan.polemetrics.client.model.EnergyPrice;
-import nl.alimjan.polemetrics.client.model.Location;
-import nl.alimjan.polemetrics.client.model.MeterValue;
+import nl.alimjan.polemetrics.model.EnergyPrice;
+import nl.alimjan.polemetrics.model.Location;
+import nl.alimjan.polemetrics.model.MeterValue;
 
 public interface PoleClient {
 

@@ -1,4 +1,4 @@
-package nl.alimjan.polemetrics.client.model;
+package nl.alimjan.polemetrics.model;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

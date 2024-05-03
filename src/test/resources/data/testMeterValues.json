@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2023-07-06T10:34:00Z",
+    "dateAdded": "2023-07-06T10:34:27Z",
+    "physicalReference": "PLUQ1001*1",
+    "transactionId": "103439885",
+    "meterValue": 914.207
+  },
+  {
+    "date": "2023-07-06T10:45:00Z",
+    "dateAdded": "2023-07-06T10:45:03Z",
+    "physicalReference": "PLUQ1001*1",
+    "transactionId": "103439885",
+    "meterValue": 914.612
+  },
+  {
+    "date": "2023-07-06T10:49:00Z",
+    "dateAdded": "2023-07-06T10:49:21Z",
+    "physicalReference": "PLUQ1001*1",
+    "transactionId": "103439885",
+    "meterValue": 914.774
+  }
+]

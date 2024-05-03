@@ -7,9 +7,9 @@ import java.io.InputStream;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import nl.alimjan.polemetrics.client.PoleClient;
-import nl.alimjan.polemetrics.client.model.EnergyPrice;
-import nl.alimjan.polemetrics.client.model.Location;
-import nl.alimjan.polemetrics.client.model.MeterValue;
+import nl.alimjan.polemetrics.model.EnergyPrice;
+import nl.alimjan.polemetrics.model.Location;
+import nl.alimjan.polemetrics.model.MeterValue;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -50,7 +50,7 @@ public class PoleClientImpl implements PoleClient {
     });
   }
 
-  private <T> List<T> fetchData(String filePath, TypeReference<List<T>> typeReference) {
+  protected  <T> List<T> fetchData(String filePath, TypeReference<List<T>> typeReference) {
     try (InputStream inputStream = TypeReference.class.getResourceAsStream(filePath)) {
       return objectMapper.readValue(inputStream, typeReference);
     } catch (IOException ex) {
